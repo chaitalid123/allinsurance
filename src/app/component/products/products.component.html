@@ -1,0 +1,41 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img style="width:70px; margin-top:5px;" src="https://tse1.mm.bing.net/th?id=OIP.wVLU_eKVN-B81NTp9CPT3QHaEc&pid=Api&P=0" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width:70px; margin-top:5px;" src="https://tse3.mm.bing.net/th?id=OIP.xCs7wXSkemGtUAOIljQBSgHaEN&pid=Api&P=0" atl="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width:60px; margin-top:5px;" src="https://tse4.mm.bing.net/th?id=OIP.0zoa_PJMOfK-xZwF8OexNQHaGz&pid=Api&P=0" atl="">
+                <h6>Fasion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width:50px; margin-top:5px;" src="https://tse3.mm.bing.net/th?id=OIP.y_1HcU4UJjgimJSN3dOZKAHaHa&pid=Api&P=0" atl="">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productlist">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" rel="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:100ch;">{{item.description}}</p>
+                <p><strong>price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtoCart(item)>Add to card</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
